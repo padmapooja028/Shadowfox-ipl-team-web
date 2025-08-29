@@ -1,0 +1,82 @@
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; font-family: 'Segoe UI', sans-serif; }
+
+ 
+    :root{
+      --csk-yellow: #ffcc00;
+      --csk-yellow-light: #fff176;
+      --csk-blue: #0033a0;
+      --card-shadow: rgba(0,0,0,0.15);
+    }
+
+    body {
+      background: linear-gradient(180deg, var(--csk-yellow-light), var(--csk-yellow));
+      color:#222;
+    }
+
+    
+    .nav {
+      display:flex; justify-content:space-between; align-items:center;
+      background: var(--csk-yellow);
+      padding:12px 20px;
+      position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 6px var(--card-shadow);
+    }
+    .nav .brand { display:flex; align-items:center; gap:10px; }
+    .nav img.logo { width:48px; height:48px; }
+    .nav h1 { font-size:18px; color:var(--csk-blue); font-weight:700; }
+    .nav .links { display:flex; gap:14px; }
+    .nav a { text-decoration:none; color:var(--csk-blue); font-weight:600; padding:6px 10px; border-radius:6px; }
+    .nav a:hover { background:#fff; color:var(--csk-blue); }
+
+    .hero {
+      background: linear-gradient(rgba(255,204,0,0.9), rgba(255,204,0,0.7)), url('images/csk-stadium.jpg') center/cover no-repeat;
+      min-height:320px; display:flex; align-items:center; justify-content:center; padding:40px 20px;
+    }
+    .hero .intro {
+      background:#fff; padding:20px; border-radius:12px;
+      box-shadow:0 6px 14px var(--card-shadow);
+      text-align:center; max-width:700px;
+    }
+    .hero h2 { color:var(--csk-blue); font-size:28px; }
+
+    .container { max-width:1100px; margin:28px auto; padding:0 16px; }
+    section { margin-bottom:32px; }
+    h2 { color:var(--csk-blue); margin-bottom:12px; }
+
+    .card { background:#fffbea; padding:16px; border-radius:12px; box-shadow:0 4px 10px var(--card-shadow); }
+
+  
+    .players { display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:16px; }
+    .player { background:linear-gradient(180deg, #fff, #fff9c4); padding:12px; border-radius:12px; transition:.2s; text-align:center; }
+    .player:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
+    .player img { width:100%; height:300px; object-fit:cover; border-radius:8px; }
+    .player h4 { margin-top:8px; color:var(--csk-blue); }
+    .role { font-size:13px; color:#444; }
+
+    
+    table { width:100%; border-collapse:collapse; }
+    th, td { padding:10px 8px; border-bottom:1px solid #ddd; text-align:left; }
+    th { background: var(--csk-yellow); color:var(--csk-blue); }
+
+    
+    .stats-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap:14px; }
+    .stat-box { background:#fffde7; padding:16px; border-radius:10px; text-align:center; box-shadow:0 4px 10px var(--card-shadow); }
+    .stat-box h3 { color:var(--csk-blue); margin-bottom:6px; }
+
+   
+    input, textarea { padding:8px; border:1px solid #ccc; border-radius:6px; }
+    button.primary { background:var(--csk-blue); color:#fff; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; }
+    button.primary:hover { background:#002060; }
+
+    footer { text-align:center; padding:20px; color:#333; background:#fff59d; margin-top:20px; }
+
+    .team-info { display:grid; grid-template-columns:2fr 1fr; gap:20px; }
+    .team-info .card { margin-bottom:20px; }
+    .news-item { margin-bottom:20px; }
+
+    @media(max-width:800px){
+      .team-info { grid-template-columns:1fr; }
+    }
+  
